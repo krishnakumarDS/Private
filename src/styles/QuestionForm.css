@@ -1,0 +1,71 @@
+/* QuestionForm.css */
+.question-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.question-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.question-form label {
+  display: block;
+  margin: 10px 0;
+}
+
+.question-form input,
+.question-form select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.question-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.question-form button:hover {
+  background-color: #0056b3;
+}
+.traveler-type-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.traveler-option {
+  padding: 0.75rem;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #f9f9f9;
+}
+
+.traveler-option:hover {
+  border-color: #7f3fbf;
+  background-color: #f0e7ff;
+}
+
+.traveler-option.selected {
+  background-color: #7f3fbf;
+  color: white;
+  border-color: #5e2eaa;
+  box-shadow: 0 0 5px rgba(127, 63, 191, 0.5);
+}
