@@ -1,71 +1,116 @@
-/* QuestionForm.css */
-.question-form {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 600px;
-  margin: 0 auto;
+/* QuestionForm.css - Full Black Theme */
+body {
+  background-color: #000000; /* Pure black background for the entire page */
+  color: #ffffff; /* White text for readability */
+  font-family: Arial, sans-serif; /* Clean and modern font */
+  margin: 0;
+  padding: 0;
 }
 
+/* Main Form Style */
+.question-form {
+  background-color: #111827; /* Dark slate background for the form */
+  padding: 24px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 50px auto; /* Centering the form */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1); /* Subtle glow around the form */
+  color: #e0e0ff; /* Light text color */
+  border: 1px solid #3b3b59; /* Border for contrast */
+}
+
+/* Form Title Style */
 .question-form h2 {
   text-align: center;
   margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #00ffe0;
+  text-shadow: 0 0 8px #00ffe088;
 }
 
+/* Label Style */
 .question-form label {
   display: block;
-  margin: 10px 0;
+  margin: 12px 0 6px;
+  font-weight: 500;
+  color: #cdd6f4;
 }
 
+/* Input Fields and Select Styling */
 .question-form input,
 .question-form select {
   width: 100%;
-  padding: 8px;
+  padding: 12px;
   margin-top: 5px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  border-radius: 8px;
+  border: 1px solid #3b3b59;
+  background-color: #1f2937; /* Dark background for inputs */
+  color: #ffffff; /* White text in inputs */
+  outline: none;
+  transition: border 0.2s ease;
 }
 
+/* Focused Input Styling */
+.question-form input:focus,
+.question-form select:focus {
+  border-color: #00ffe0;
+  box-shadow: 0 0 10px #00ffe066;
+}
+
+/* Button Styling */
 .question-form button {
   width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
+  padding: 12px;
+  background-color: #00ffe0;
+  color: #0a0f1a;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: 0 0 15px #00ffe0aa;
+  transition: all 0.3s ease;
 }
 
+/* Button Hover Effect */
 .question-form button:hover {
-  background-color: #0056b3;
+  background-color: #ff00f2;
+  color: #ffffff;
+  box-shadow: 0 0 20px #ff00f2aa;
 }
+
+/* Traveler Type Grid */
 .traveler-type-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.75rem;
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
 }
 
+/* Traveler Option Styling */
 .traveler-option {
   padding: 0.75rem;
-  border: 2px solid #ccc;
+  border: 2px solid #3b3b59;
   border-radius: 10px;
   text-align: center;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
-  background: #f9f9f9;
+  background: #1f2937; /* Dark background for each option */
+  color: #e0e0ff; /* Light text for the options */
 }
 
+/* Hover Effect for Traveler Options */
 .traveler-option:hover {
   border-color: #7f3fbf;
-  background-color: #f0e7ff;
+  background-color: #2a2e3a;
+  box-shadow: 0 0 8px #7f3fbf88;
 }
 
+/* Selected Traveler Option Styling */
 .traveler-option.selected {
   background-color: #7f3fbf;
   color: white;
   border-color: #5e2eaa;
-  box-shadow: 0 0 5px rgba(127, 63, 191, 0.5);
+  box-shadow: 0 0 12px rgba(127, 63, 191, 0.6);
 }

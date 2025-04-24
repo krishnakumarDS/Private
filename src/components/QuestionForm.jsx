@@ -2,15 +2,16 @@ import React, { useState } from "react";
 import "../styles/QuestionForm.css";
 
 function QuestionForm({ onSubmit }) {
+  const [startLocation, setStartLocation] = useState(""); // NEW
   const [location, setLocation] = useState("");
   const [days, setDays] = useState("");
   const [budget, setBudget] = useState("");
   const [userType, setUserType] = useState("couple");
-  const [name, setName] = useState(""); // Added state for name
+  const [name, setName] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit({ location, days, budget, userType, name });
+    onSubmit({ startLocation, location, days, budget, userType, name }); // include startLocation
   };
 
   return (
@@ -29,12 +30,23 @@ function QuestionForm({ onSubmit }) {
       </label>
 
       <label>
+        Start Location 🚉
+        <input
+          type="text"
+          value={startLocation}
+          onChange={(e) => setStartLocation(e.target.value)}
+          placeholder="e.g. Madurai"
+          required
+        />
+      </label>
+
+      <label>
         Destination 🗺️
         <input
           type="text"
           value={location}
           onChange={(e) => setLocation(e.target.value)}
-          placeholder="e.g. Madurai"
+          placeholder="e.g. Kerala"
           required
         />
       </label>
@@ -60,6 +72,7 @@ function QuestionForm({ onSubmit }) {
           required
         />
       </label>
+
       <label className="traveler-type-label">
         Traveler Type 🚶
         <div className="traveler-type-grid">
